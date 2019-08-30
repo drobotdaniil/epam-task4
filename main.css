@@ -5,8 +5,9 @@
 }
 body {
   background: #ebebeb;
-  max-width: 1360px;
+  max-width: 1380px;
   margin: 0 auto;
+  /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
 }
 ul,
 li {
@@ -29,6 +30,7 @@ header {
   position: absolute;
   width: 100%;
   max-width: 1360px;
+  flex-direction: column;
 }
 
 .logo-img img {
@@ -40,8 +42,11 @@ header {
 .header-menu-nav li {
   margin-right: 20px;
 }
+.header-menu-nav li:last-child {
+  margin-right: 0px;
+}
 .header-menu-nav li a {
-  font-size: 25px;
+  font-size: 18px;
   text-decoration: none;
   color: #fafafad0;
   transition: 0.4s ease;
@@ -62,8 +67,9 @@ main {
   background-size: cover;
   background-blend-mode: darken;
   justify-content: center;
-  padding-top: 130px;
+  padding-top: 190px;
   padding-bottom: 70px;
+  flex-direction: column;
 }
 .left-block-info {
   text-align: center;
@@ -71,8 +77,9 @@ main {
   padding: 10px;
   border-radius: 8px;
   border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 8px;
+  order: 1;
 }
 .name-about-me {
   font-size: 25px;
@@ -89,10 +96,14 @@ main {
 .right-block-photo {
   background: rgba(2, 2, 2, 0.609);
   border-radius: 8px;
-  border-top-left-radius: 0px;
+  border-top-left-radius: 8px;
   border-bottom-left-radius: 0px;
-  height: 206px;
-  /* order: -1; */
+  border-bottom-right-radius: 0px;
+  height: 208px;
+  order: 0;
+  text-align: center;
+  max-width: 320px;
+  width: 100%;
 }
 .right-block-photo img {
   max-height: 100%;
@@ -103,6 +114,7 @@ main {
 .my-triger {
   text-align: center;
   margin-top: 20px;
+  padding: 0 10px;
 }
 .triger-h {
   font-size: 35px;
@@ -125,7 +137,7 @@ main {
 
 .my-works::before {
   content: "Here is the selection of my works.";
-  font-size: 25px;
+  font-size: 22px;
   line-height: 70px;
 }
 .my-works {
@@ -184,45 +196,46 @@ main {
 .contact-me-form {
   display: flex;
   flex-wrap: wrap;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
   justify-content: center;
+  padding: 0 20px;
 }
-.contact-me-form-name-left {
-  width: 250px;
-  height: 30px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  padding-left: 10px;
-  outline: none;
-  border-radius: 3px;
-  border: 1px solid silver;
-}
+.contact-me-form-name-left,
 .contact-me-form-email-right {
-  width: 250px;
+  width: 100%;
+  max-width: 450px;
+  height: 30px;
   margin-bottom: 20px;
   padding-left: 10px;
   outline: none;
   border-radius: 3px;
-  border: 1px solid silver;
+  border: 1px solid rgb(112, 111, 111);
+  background: rgb(226, 226, 226);
 }
 .contact-massage-center {
-  width: 520px;
+  width: 100%;
   resize: none;
-  max-width: 520px;
+  max-width: 450px;
   margin-bottom: 20px;
   padding: 10px;
   outline: none;
   border-radius: 3px;
   font-size: 15px;
+  height: 100px;
+  border: 1px solid rgb(112, 111, 111);
+  background: rgb(226, 226, 226);
 }
 .contact-form-submit-center {
-  width: 520px;
+  width: 100%;
+  max-width: 450px;
   padding: 10px 0;
   border-radius: 3px;
-  border: 1px solid silver;
+  border: 1px solid rgb(112, 111, 111);
   outline: none;
   cursor: pointer;
+  /* background: rgb(180, 58, 58); */
 }
 
 /* footer */
@@ -269,29 +282,63 @@ footer::after {
 .footer-ul-social li a:hover {
   color: rgb(36, 209, 36);
 }
-
-@media screen and (min-width: 768px){
-    .about-me {
-    }
-    .name-about-me {
-        font-size: 30px;
-    }
-    .text-about-me {
-        width: 300px;
-        font-size: 20px;
-    }
-    .left-block-info {
-        padding: 30px;
-    }
-    .right-block-photo {
-
-        height: 384px;
-        /* order: -1; */
-      }
-    .right-block-photo img {
-        padding: 10px;
-        padding-right: 30px;
-      }
+@media screen and (min-width: 576px) {
+  header {
+    flex-direction: row;
+  }
+  .about-me{
+    flex-direction: row;
+    padding-top: 160px;
+  }
+  .left-block-info {
+    order: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 0px;
+  }
+  .right-block-photo {
+    order: 1;
+    width: auto;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 8px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-menu-nav li a {
+    font-size: 25px;
+  }
+  .about-me {
+  }
+  .name-about-me {
+    font-size: 30px;
+  }
+  .text-about-me {
+    width: 300px;
+    font-size: 20px;
+  }
+  .left-block-info {
+    padding: 30px;
+  }
+  .right-block-photo {
+    height: 384px;
+    /* order: -1; */
+  }
+  .right-block-photo img {
+    padding: 10px;
+    padding-right: 30px;
+  }
+  .contact-me-form-email-right {
+    max-width: 250px;
+  }
+  .contact-me-form-name-left {
+    max-width: 250px;
+    margin-right: 20px;
+  }
+  .contact-massage-center {
+    max-width: 520px;
+  }
+  .contact-form-submit-center {
+    max-width: 520px;
+  }
 }
 
 @media screen and (min-width: 950px) {
