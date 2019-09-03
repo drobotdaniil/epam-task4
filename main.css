@@ -179,7 +179,6 @@ header {
   color: #fafafa;
   border-radius: 5px;
   padding: 3px 20px;
-  font-family: cursive;
 }
 .triger2 {
   visibility: hidden;
@@ -197,7 +196,6 @@ header {
   color: #fafafa;
   border-radius: 5px;
   padding: 3px 20px;
-  font-family: cursive;
 }
 .triger3 {
   visibility: hidden;
@@ -215,7 +213,6 @@ header {
   color: #fafafa;
   border-radius: 5px;
   padding: 3px 20px;
-  font-family: cursive;
 }
 .triger4 {
   visibility: hidden;
@@ -234,7 +231,6 @@ header {
   border-radius: 5px;
   padding: 3px 20px;
   background: #a018a0;
-  font-family: cursive;
 }
 .triger4::after{
   content: "\A Development Tools: \A Avocode and Visual Studio.";
@@ -300,7 +296,6 @@ header {
   font-size: 22px;
   font-weight: 700;
   line-height: 40px;
-  font-family: cursive;
 }
 .my-works-list-item:nth-child(2) .work-text::before {
   content: "HTML / CSS / JS\a";
@@ -308,7 +303,6 @@ header {
   font-size: 22px;
   font-weight: 700;
   line-height: 40px;
-  font-family: cursive;
 }
 .my-works-list-item:nth-child(3) .work-text::before {
   content: "HTML / CSS / JS\a";
@@ -316,7 +310,6 @@ header {
   font-size: 22px;
   font-weight: 700;
   line-height: 40px;
-  font-family: cursive;
 }
 /* link-contact-me */
 .contact-me {
