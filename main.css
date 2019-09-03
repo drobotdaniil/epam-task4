@@ -238,7 +238,7 @@ main {
   width: 100%;
   max-width: 450px;
   padding: 10px 0;
-  border-radius: 0px;
+  border-radius: 3px;
   -webkit-appearance: none;
   border: 1px solid rgb(112, 111, 111);
   outline: none;
