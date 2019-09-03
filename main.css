@@ -56,9 +56,6 @@ header {
 }
 
 /* main */
-main {
-}
-
 .about-me {
   display: flex;
   /* flex-direction: column; */
@@ -85,6 +82,17 @@ main {
   font-size: 25px;
   margin-bottom: 10px;
   color: rgb(36, 209, 36);
+  visibility: hidden;
+  position: relative;
+}
+.name-about-me::after{
+  content: "I am Daniil \a a front-end developer";
+  white-space: pre;
+  visibility: visible;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
 }
 .text-about-me {
   width: 300px;
@@ -92,6 +100,7 @@ main {
   line-height: 100%;
   color: #fafafa;
   margin: 0 auto;
+  margin-top: 18px;
 }
 .right-block-photo {
   background: rgba(2, 2, 2, 0.609);
@@ -110,37 +119,141 @@ main {
   border-radius: 20px;
   padding: 10px;
 }
+
+.my-triger {
+  text-align: center;
+  margin-top: 20px;
+  padding: 0 10px;
+}
 .my-triger::after {
   content: "WORKS";
   color: rgb(48, 170, 48);
   font-weight: bold;
   white-space: pre;
   font-size: 40px;
-  margin: 0 auto;
-}
-.my-triger {
-  text-align: center;
-  margin-top: 20px;
-  padding: 0 10px;
-}
-.triger1{
-  visibility: hidden;
-}
-.triger1::after{
-  content: url("/images/icon9.png");
-  visibility: visible;
-  transform: translateY(5px)
 }
 .triger-h {
   font-size: 35px;
-  margin-bottom: 10px;
+  margin-top: 45px;
+  margin-bottom: 115px;
   color: rgb(48, 170, 48);
+  visibility: hidden;
+  position: relative;
+}
+.triger-h::after {
+  visibility: visible;
+  content: "My Programming Skills.";
+  position: absolute;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 .triger-block {
-  font-size: 22px;
-  margin-bottom: 40px;
+  font-size: 23px;
+  margin-bottom: 60px;
+  position: relative;
 }
+.triger-block::before{
+  position: absolute;
+  content: "I have learnt";
+  transform: translate(-50%, -50%) translateY(-45px);
+  font-size: 29px;
 
+  /* top: 50%; */
+}
+.triger-block li {
+  margin-bottom: 15px;
+}
+.triger1 {
+  visibility: hidden;
+  position: relative;
+  margin-top: 45px;
+}
+.triger1::before {
+  position: absolute;
+  content: "HTML5";
+  width: 120px;
+  visibility: visible;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: orangered;
+  color: #fafafa;
+  border-radius: 5px;
+  padding: 3px 20px;
+}
+/* .triger1::after {
+  position: absolute;
+  content: url("/images/icons8-html-5.svg");
+  visibility: visible;
+  transform: translateX(-15px);
+} */
+.triger2 {
+  visibility: hidden;
+  position: relative;
+  /* width: 230px;
+  margin: 0 auto; */
+  height: 26px;
+  /* overflow: hidden; */
+}
+.triger2::before {
+  position: absolute;
+  width: 120px;
+  content: "CSS3";
+  visibility: visible;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #4242fb;
+  color: #fafafa;
+  border-radius: 5px;
+  padding: 3px 20px;
+}
+/* .triger2::after {
+  position: absolute;
+  content: url("/images/icons8-css3.svg");
+  visibility: visible;
+  transform: translateX(5px) translateY(-57px);
+} */
+.triger3 {
+  visibility: hidden;
+  position: relative;
+  /* width: 230px; */
+  /* margin: 0 auto; */
+  height: 26px;
+}
+.triger3::before {
+  position: absolute;
+  left: 50%;
+  width: 120px;
+  transform: translate(-50%, -50%);
+  content: "Vanilla JS";
+  visibility: visible;
+  background: #dada2e;
+  color: #fafafa;
+  border-radius: 5px;
+  padding: 3px 20px;
+}
+.triger4 {
+  visibility: hidden;
+  position: relative;
+  height: 26px;
+}
+.triger4::before{
+  position: absolute;
+  left: 50%;
+  width: 120px;
+  transform: translate(-50%,-50%);
+  content: "Bootstrap";
+  visibility: visible;
+  color: #fafafa;
+  border-radius: 5px;
+  padding: 3px 20px;
+  background: #a018a0;
+}
+.triger4::after{
+  content: "\A Development Tools: \A Avocode and Visual Studio.";
+  white-space: pre;
+  visibility: visible;
+}
 /* my-works */
 
 .my-works::before {
@@ -158,13 +271,17 @@ main {
 }
 .my-works-list-item {
   padding: 20px 20px;
-  background: rgba(170, 74, 74, 0.192);
+  background: rgba(173, 40, 40, 0.356);
+  transition: 0.4s ease;
+}
+.my-works-list-item:hover {
+  filter: brightness(90%);
 }
 .my-works-list-item:nth-child(2) {
-  background: #699b5d4f;
+  background: #69a35a81;
 }
 .my-works-list-item:last-child {
-  background: #9b5d9b4d;
+  background: #9b5d9b85;
 }
 .my-works-list-item a {
   text-align: center;
@@ -190,6 +307,27 @@ main {
   width: auto;
   margin: 0 auto;
 }
+.my-works-list-item:first-child .work-text::before {
+  content: "HTML / CSS\a";
+  white-space: pre;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.my-works-list-item:nth-child(2) .work-text::before {
+  content: "HTML / CSS / JS\a";
+  white-space: pre;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.my-works-list-item:nth-child(3) .work-text::before {
+  content: "HTML / CSS / JS\a";
+  white-space: pre;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 40px;
+}
 /* link-contact-me */
 .contact-me {
   text-align: center;
@@ -197,8 +335,18 @@ main {
 }
 .contact-me-name {
   font-size: 35px;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
   color: rgb(48, 170, 48);
+  position: relative;
+  visibility: hidden;
+}
+.contact-me-name::after{
+  position: absolute;
+  visibility: visible;
+  width: 300px;
+  left: 50%;
+  transform: translate(-50%);
+  content: "I am available for work."
 }
 .contact-me-form {
   display: flex;
@@ -220,6 +368,16 @@ main {
   border-radius: 3px;
   border: 1px solid rgb(112, 111, 111);
   background: rgb(226, 226, 226);
+}
+.contact-me-form-name-left:focus,
+.contact-me-form-email-right:focus,
+.contact-massage-center:focus {
+  background: rgb(212, 212, 212);
+}
+.contact-me-form-name-left:focus::placeholder,
+.contact-me-form-email-right:focus::placeholder,
+.contact-massage-center:focus::placeholder {
+  color: #000;
 }
 .contact-massage-center {
   width: 100%;
@@ -243,7 +401,10 @@ main {
   border: 1px solid rgb(112, 111, 111);
   outline: none;
   cursor: pointer;
-  /* background: rgb(180, 58, 58); */
+  background: rgb(226, 226, 226);
+}
+.contact-form-submit-center:hover {
+  background: rgb(212, 212, 212);
 }
 
 /* footer */
@@ -294,7 +455,7 @@ footer::after {
   header {
     flex-direction: row;
   }
-  .about-me{
+  .about-me {
     flex-direction: row;
     padding-top: 160px;
   }
@@ -303,13 +464,23 @@ footer::after {
     border-top-left-radius: 8px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+    padding-top: 20px;
   }
   .right-block-photo {
     order: 1;
     width: auto;
-    height: 208px;
+    height: 226px;
     border-top-left-radius: 0px;
     border-bottom-right-radius: 8px;
+  }
+  .triger-h {
+    margin-bottom: 80px;
+  }
+  .contact-me-name{
+    margin-bottom: 20px;
+  }
+  .contact-me-name::after{
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -322,17 +493,21 @@ footer::after {
   .text-about-me {
     width: 300px;
     font-size: 20px;
+    margin-top: 25px;
   }
   .left-block-info {
     padding: 30px;
   }
   .right-block-photo {
-    height: 384px;
+    height: 399px;
     /* order: -1; */
   }
   .right-block-photo img {
     padding: 10px;
     padding-right: 30px;
+  }
+  .triger-h {
+    margin-bottom: 0px;
   }
   .contact-me-form-email-right {
     max-width: 250px;
@@ -356,9 +531,10 @@ footer::after {
   .text-about-me {
     width: 500px;
     font-size: 25px;
+    margin-top: 32px;
   }
   .right-block-photo {
-    height: 367px;
+    height: 389px;
   }
   .work-text {
     width: 900px;
