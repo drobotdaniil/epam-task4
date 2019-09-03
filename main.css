@@ -357,9 +357,9 @@ header {
 .contact-massage-center:focus {
   background: rgb(212, 212, 212);
 }
-.contact-me-form-name-left:focus::placeholder,
-.contact-me-form-email-right:focus::placeholder,
-.contact-massage-center:focus::placeholder {
+.contact-me-form-name-left::placeholder,
+.contact-me-form-email-right::placeholder,
+.contact-massage-center::placeholder {
   color: #000;
 }
 .contact-massage-center {
@@ -386,6 +386,7 @@ header {
   cursor: pointer;
   background: rgb(226, 226, 226);
   font-size: 14px;
+  color: #000;
 }
 .contact-form-submit-center:hover {
   background: rgb(212, 212, 212);
