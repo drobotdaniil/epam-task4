@@ -7,7 +7,6 @@ body {
   background: #ebebeb;
   max-width: 1380px;
   margin: 0 auto;
-  /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
 }
 ul,
 li {
@@ -58,7 +57,6 @@ header {
 /* main */
 .about-me {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   background-image: url("./images/background.jpg"), linear-gradient(45deg, #797878, #d2e1ec);
   background-size: cover;
@@ -135,7 +133,7 @@ header {
 .triger-h {
   font-size: 35px;
   margin-top: 45px;
-  margin-bottom: 115px;
+  margin-bottom: 125px;
   color: rgb(48, 170, 48);
   visibility: hidden;
   position: relative;
@@ -150,7 +148,7 @@ header {
 }
 .triger-block {
   font-size: 23px;
-  margin-bottom: 60px;
+  margin-bottom: 75px;
   position: relative;
 }
 .triger-block::before{
@@ -158,8 +156,6 @@ header {
   content: "I have learnt";
   transform: translate(-50%, -50%) translateY(-45px);
   font-size: 29px;
-
-  /* top: 50%; */
 }
 .triger-block li {
   margin-bottom: 15px;
@@ -181,19 +177,10 @@ header {
   border-radius: 5px;
   padding: 3px 20px;
 }
-/* .triger1::after {
-  position: absolute;
-  content: url("/images/icons8-html-5.svg");
-  visibility: visible;
-  transform: translateX(-15px);
-} */
 .triger2 {
   visibility: hidden;
   position: relative;
-  /* width: 230px;
-  margin: 0 auto; */
   height: 26px;
-  /* overflow: hidden; */
 }
 .triger2::before {
   position: absolute;
@@ -207,17 +194,9 @@ header {
   border-radius: 5px;
   padding: 3px 20px;
 }
-/* .triger2::after {
-  position: absolute;
-  content: url("/images/icons8-css3.svg");
-  visibility: visible;
-  transform: translateX(5px) translateY(-57px);
-} */
 .triger3 {
   visibility: hidden;
   position: relative;
-  /* width: 230px; */
-  /* margin: 0 auto; */
   height: 26px;
 }
 .triger3::before {
@@ -500,7 +479,6 @@ footer::after {
   }
   .right-block-photo {
     height: 399px;
-    /* order: -1; */
   }
   .right-block-photo img {
     padding: 10px;
